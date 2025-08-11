@@ -1,0 +1,27 @@
+meta {
+  name: Список испытаний
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL}}/api/v1/challenges/sessions/
+  body: none
+  auth: inherit
+}
+
+tests {
+  // Ответ уже объект, парсить не нужно
+  const data = res.body;
+  
+  // Берём последний элемент массива results
+  const lastItem = data.results[0];
+  
+  // Сохраняем id в переменную
+  bru.setVar("lastId", lastItem.id);
+  
+}
+
+settings {
+  encodeUrl: true
+}

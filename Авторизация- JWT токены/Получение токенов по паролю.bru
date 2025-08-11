@@ -1,0 +1,32 @@
+meta {
+  name: Получение токенов по паролю
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/api/v1/auth/token/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "phone": "+77011041144",
+    "password": "HQgMzg83megTaB2"
+  }
+}
+
+tests {
+  // Данные ответа уже объект
+  const data = res.body;
+  
+  // Сохраняем переменные
+  bru.setVar("accessToken", data.access);
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}

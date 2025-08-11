@@ -1,0 +1,15 @@
+meta {
+  name: Детали испытания
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{URL}}/api/v1/challenges/sessions/{{lastId}}/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

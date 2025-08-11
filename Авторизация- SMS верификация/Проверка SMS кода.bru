@@ -1,0 +1,22 @@
+meta {
+  name: Проверка SMS кода
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{URL}}/api/v1/auth/sms/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "phone": "{{phone_mk}}",
+    "code": "8505"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

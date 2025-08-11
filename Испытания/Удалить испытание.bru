@@ -1,0 +1,15 @@
+meta {
+  name: Удалить испытание
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{URL}}/api/v1/challenges/sessions/{{lastId}}/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
