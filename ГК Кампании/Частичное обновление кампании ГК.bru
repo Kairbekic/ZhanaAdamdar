@@ -1,0 +1,22 @@
+meta {
+  name: Частичное обновление кампании ГК
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{URL}}/api/v1/gk/campaigns/231/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name_ru": "124_тест_рус",
+    "name_kk": "124_тест_каз"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

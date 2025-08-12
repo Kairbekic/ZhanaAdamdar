@@ -1,0 +1,24 @@
+meta {
+  name: Частичное обновление пользователя
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{URL}}/api/v1/users/38/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "first_name": "Вася",
+    "last_name": "Пупкин",
+    "middle_name": "Тестович",
+    "city": 3
+  }
+}
+
+settings {
+  encodeUrl: true
+}

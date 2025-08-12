@@ -1,0 +1,15 @@
+meta {
+  name: Получить город по ID
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{URL}}/api/v1/cities/22
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

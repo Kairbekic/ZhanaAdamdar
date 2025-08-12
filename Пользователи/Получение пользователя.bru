@@ -1,0 +1,15 @@
+meta {
+  name: Получение пользователя
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{URL}}/api/v1/users/39/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

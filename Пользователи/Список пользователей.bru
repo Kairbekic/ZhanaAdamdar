@@ -1,0 +1,15 @@
+meta {
+  name: Список пользователей
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL}}/api/v1/users/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

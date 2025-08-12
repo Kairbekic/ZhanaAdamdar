@@ -1,0 +1,27 @@
+meta {
+  name: Полное обновление пользователя
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{URL}}/api/v1/users/38/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "first_name": "Вася",
+    "last_name": "Пупкин",
+    "middle_name": "Петрович",
+    "badge_number": "KZ54321",
+    "birth_date": "1985-05-15",
+    "city": 2,
+    "language": "ru"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

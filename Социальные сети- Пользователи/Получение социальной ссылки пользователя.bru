@@ -1,0 +1,15 @@
+meta {
+  name: Получение социальной ссылки пользователя
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{URL}}/api/v1/social-links/user/3/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

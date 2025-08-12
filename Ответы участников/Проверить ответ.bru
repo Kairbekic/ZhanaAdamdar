@@ -1,0 +1,22 @@
+meta {
+  name: Проверить ответ
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{URL}}/api/v1/challenges/answers/375/check/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "is_correct": true,
+    "score": 7
+  }
+}
+
+settings {
+  encodeUrl: true
+}

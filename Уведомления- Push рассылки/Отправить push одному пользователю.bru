@@ -1,0 +1,31 @@
+meta {
+  name: Отправить push одному пользователю
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/api/v1/notifications/send-push/to-user/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "user_id": 39,
+    "title_ru": "Поздравляем с достижением!",
+    "body_ru": "Вы успешно завершили челлендж 'Здоровый образ жизни'",
+    "title_kk": "Жетістікпен құттықтаймыз!",
+    "body_kk": "'Салауатты өмір салты' челленджін сәтті аяқтадыңыз",
+    "data": {
+      "challenge_id": "123",
+      "type": "achievement",
+      "points": "50"
+    },
+    "image": "https://example.com/achievement-badge.png"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Модерация аватара
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{URL}}/api/v1/avatars/21/moderate/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "status": "approved"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

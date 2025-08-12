@@ -13,8 +13,17 @@ put {
 body:json {
   {
     "phone": "{{phone_mk}}",
-    "code": "8505"
+    "code": "1129"
   }
+}
+
+tests {
+  // Данные ответа уже объект
+  const data = res.body;
+  
+  // Сохраняем переменные
+  bru.setVar("accessToken", data.access);
+  
 }
 
 settings {

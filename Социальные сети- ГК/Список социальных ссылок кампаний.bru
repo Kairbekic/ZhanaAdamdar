@@ -1,0 +1,15 @@
+meta {
+  name: Список социальных ссылок кампаний
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{URL}}/api/v1/social-links/gk/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
